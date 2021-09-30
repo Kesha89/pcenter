@@ -20,10 +20,10 @@ require_once "connect.php";
             $slide_urls = mysqli_query($connect, "SELECT * FROM `slides`");
             $slide_urls = mysqli_fetch_all($slide_urls);
         
-            foreach($slide_urls as $slide_urls){
+            foreach($slide_urls as $slide_url){
                 ?>
                 <div class="swiper-slide">
-                    <img src="<?= $slide_urls[2] ?>">
+                    <img src="<?= $slide_url[2] ?>">
                 </div>
                 <?php
             }
